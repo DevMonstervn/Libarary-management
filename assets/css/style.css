@@ -1,0 +1,415 @@
+/* Basic Reset */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; /* Phông chữ hiện đại và dễ đọc */
+  line-height: 1.7; /* Tăng khoảng cách dòng để dễ đọc hơn */
+  background-color: transparent; /* Nền trong suốt */
+  color: #ffffff; /* Màu chữ tối hơn một chút */
+  background-image: url("https://bciprod.azureedge.net/media/14289/vestfold_academic_library_002.jpg?mode=pad&width=1500&height=1000&bgcolor=ffffff&format=jpg&quality=85"); /* Hình nền thư viện hiện đại */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+header,
+main,
+footer,
+.hero,
+.featured-books,
+.new-arrivals,
+.book-list-section,
+.book-detail-section,
+.login-section {
+  background-color: rgba(255, 255, 255, 0.1); /* Nền trắng trong suốt (50%) */
+  padding: 30px; /* Tăng padding để có không gian hơn */
+  border-radius: 12px; /* Bo tròn góc mềm mại hơn */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Tăng độ đổ bóng tinh tế hơn */
+  margin-bottom: 30px; /* Tăng khoảng cách giữa các phần */
+}
+
+header {
+  margin-bottom: 40px; /* Tăng khoảng cách dưới header */
+  background-color: rgb(
+    255,
+    255,
+    255,
+    0.1
+  ); /* Nền trắng hoàn toàn cho header */
+  padding: 20px 30px; /* Đảm bảo có padding cho header */
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center; /* Căn giữa các mục menu */
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 20px; /* Tăng khoảng cách giữa các mục menu */
+}
+
+nav a {
+  color: #343a40; /* Màu chữ menu tối hơn */
+  text-decoration: none;
+  font-weight: 500; /* Chữ đậm vừa phải */
+  transition: color 0.3s ease; /* Hiệu ứng chuyển màu khi hover */
+}
+
+nav a:hover {
+  color: #007bff; /* Màu khi hover */
+}
+
+main {
+  padding: 30px;
+}
+
+.hero {
+  text-align: center;
+  padding: 60px 30px; /* Tăng padding cho hero */
+  background-color: rgba(255, 255, 255, 0.1); /* Giữ nền trong suốt cho hero */
+  border-radius: 12px;
+}
+
+.hero h2 {
+  font-size: 2.5em; /* Tiêu đề lớn hơn */
+  margin-bottom: 20px;
+  color: #343a40;
+}
+
+.hero p {
+  font-size: 1.2em;
+  color: #6c757d;
+  margin-bottom: 30px;
+}
+
+.hero .search-bar {
+  display: flex;
+  justify-content: center;
+  max-width: 600px; /* Giới hạn chiều rộng thanh tìm kiếm */
+  margin: 0 auto;
+}
+
+.hero .search-bar input[type="text"] {
+  padding: 12px; /* Tăng padding cho input */
+  border: 1px solid #ced4da;
+  border-radius: 8px 0 0 8px; /* Bo tròn bên trái */
+  width: 70%;
+  margin-right: 0; /* Loại bỏ margin right */
+  font-size: 1em;
+}
+
+.hero .search-bar button {
+  padding: 12px 25px; /* Tăng padding cho button */
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 0 8px 8px 0; /* Bo tròn bên phải */
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+.hero .search-bar button:hover {
+  background-color: #0056b3;
+}
+
+.featured-books h2,
+.new-arrivals h2 {
+  color: #343a40;
+  margin-bottom: 25px;
+  font-size: 2em;
+  text-align: center; /* Căn giữa tiêu đề các section */
+}
+
+.featured-books .book-list,
+.new-arrivals .book-list {
+  display: flex;
+  overflow-x: auto;
+  padding: 25px 0;
+  gap: 25px;
+}
+
+.featured-books .book-item,
+.new-arrivals .book-item {
+  flex: 0 0 auto;
+  width: 180px; /* Tăng kích thước item */
+  text-align: center;
+  border: 1px solid #dee2e6; /* Thêm border cho item */
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Thêm bóng cho item */
+}
+
+.featured-books .book-item img,
+.new-arrivals .book-item img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px; /* Tăng khoảng cách dưới ảnh */
+}
+
+.featured-books .book-item h3,
+.new-arrivals .book-item h3 {
+  margin-top: 0;
+  color: #343a40;
+  font-size: 1.1em; /* Giảm kích thước tiêu đề sách */
+  margin-bottom: 10px;
+  font-weight: 600; /* Chữ đậm hơn */
+}
+
+.featured-books .view-more,
+.new-arrivals .view-more {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.featured-books .view-more a,
+.new-arrivals .view-more a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.featured-books .view-more a:hover,
+.new-arrivals .view-more a:hover {
+  background-color: #0056b3;
+}
+
+footer {
+  text-align: center;
+  padding: 2em 0; /* Tăng padding cho footer */
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.9
+  ); /* Giữ nền trong suốt cho footer hoặc bạn có thể đổi thành màu khác */
+  color: #343a40; /* Điều chỉnh màu chữ footer cho phù hợp */
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  border-top: 1px solid #495057; /* Thêm đường viền trên footer */
+}
+
+.book-list-section h2,
+.book-detail-section h2 {
+  color: #343a40;
+  margin-bottom: 25px;
+  font-size: 2em;
+}
+
+#bookList {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(280px, 1fr)
+  ); /* Tăng kích thước minmax */
+  gap: 25px;
+  padding: 20px; /* Thêm padding cho danh sách sách */
+}
+
+.book-item {
+  border: 1px solid #dee2e6;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.5); /* Giữ nền trong suốt cho item */
+}
+
+.book-item img {
+  max-width: 80%; /* Giảm kích thước ảnh trong list */
+  height: auto;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.book-item h3 {
+  margin-top: 0;
+  color: #343a40;
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.book-item p {
+  color: #6c757d;
+  font-size: 0.95em;
+  margin-bottom: 12px;
+}
+
+.book-item a {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.book-item a:hover {
+  background-color: #0056b3;
+}
+
+.book-detail-section {
+  padding: 30px;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.5
+  ); /* Giữ nền trong suốt cho section chi tiết sách */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  margin-bottom: 30px;
+}
+
+.login-section {
+  padding: 40px; /* Tăng padding */
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.5
+  ); /* Giữ nền trong suốt cho form đăng nhập */
+  border-radius: 12px; /* Bo tròn góc hơn */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Tăng độ đổ bóng */
+  max-width: 450px; /* Tăng chiều rộng tối đa */
+  margin: 80px auto; /* Tăng margin trên và dưới */
+}
+
+.login-section h2 {
+  text-align: center;
+  margin-bottom: 35px; /* Tăng khoảng cách */
+  color: #343a40;
+  font-size: 2.2em; /* Tăng kích thước tiêu đề */
+}
+
+.form-group {
+  margin-bottom: 25px; /* Tăng khoảng cách */
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 10px; /* Tăng khoảng cách */
+  font-weight: bold;
+  color: #495057; /* Màu chữ đậm hơn */
+  font-size: 1em;
+}
+
+.form-group input[type="text"],
+.form-group input[type="password"] {
+  width: 100%;
+  padding: 14px; /* Tăng padding */
+  border: 1px solid #ced4da;
+  border-radius: 8px; /* Bo tròn góc hơn */
+  box-sizing: border-box;
+  font-size: 1.1em;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="password"]:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.5); /* Hiệu ứng focus rõ ràng hơn */
+}
+
+.form-group .password-toggle {
+  position: relative;
+}
+
+.form-group .password-toggle input[type="password"] {
+  padding-right: 45px; /* Tăng khoảng trống cho icon */
+}
+
+.form-group .password-toggle button {
+  position: absolute;
+  right: 15px; /* Điều chỉnh vị trí icon */
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  color: #6c757d; /* Màu cho icon */
+}
+
+.form-group input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.login-section button[type="submit"] {
+  width: 100%;
+  padding: 14px; /* Tăng padding */
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px; /* Bo tròn góc hơn */
+  cursor: pointer;
+  font-size: 1.1em;
+  transition: background-color 0.3s ease;
+}
+
+.login-section button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+.login-section p {
+  text-align: center;
+  margin-top: 25px; /* Tăng khoảng cách */
+  color: #6c757d;
+  font-size: 1em;
+}
+
+.login-section p a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.login-section p a:hover {
+  text-decoration: underline;
+}
+
+/* Ẩn header và nav mặc định trên trang đăng nhập */
+body.login-page header,
+body.login-page nav {
+  display: none;
+}
+
+/* Hiển thị header và nav trên các trang khác */
+body:not(.login-page) header,
+body:not(.login-page) nav {
+  display: block;
+}
+
+/* Style cho body khi không phải trang đăng nhập để căn giữa nội dung */
+body:not(.login-page) {
+  display: flex;
+  flex-direction: column; /* Sắp xếp các phần tử theo chiều dọc */
+  min-height: 100vh;
+  margin: 0;
+}
+
+body:not(.login-page) main {
+  flex-grow: 1; /* Cho phép main chiếm không gian còn lại */
+  display: block; /* Chuyển main về block để không bị ảnh hưởng bởi flex của body */
+  justify-content: center; /* Loại bỏ căn giữa theo chiều ngang của main */
+  align-items: stretch; /* Kéo dài main theo chiều dọc */
+  width: 100%;
+  padding: 30px; /* Thêm padding cho main */
+}
+
+body:not(.login-page) footer {
+  position: static; /* Đặt footer về vị trí tĩnh */
+  margin-top: 30px; /* Thêm margin trên footer */
+}

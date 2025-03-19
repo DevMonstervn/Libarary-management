@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trang chủ - Thư Viện</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Thư Viện</h1>
+      <nav>
+        <ul>
+          <li><a href="home.html">Trang chủ</a></li>
+          <li><a href="books.html">Sách</a></li>
+          <li><a href="profile.html">Hồ sơ</a></li>
+          <li><a href="#" onclick="logout()">Đăng xuất</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <h2>Chào mừng đến với Thư Viện Trực Tuyến!</h2>
+        <p>Tìm kiếm và khám phá hàng ngàn cuốn sách hấp dẫn.</p>
+        <div class="search-bar">
+          <input type="text" id="searchInput" placeholder="Tìm kiếm sách..." />
+          <button onclick="searchBooks()">Tìm kiếm</button>
+        </div>
+      </section>
+
+      <section class="featured-books">
+        <h2>Sách Nổi Bật</h2>
+        <div class="book-list"></div>
+        <div class="view-more">
+          <a href="books.html?section=featured">Xem thêm sách nổi bật</a>
+        </div>
+      </section>
+
+      <section class="new-arrivals">
+        <h2>Sách Mới</h2>
+        <div class="book-list"></div>
+        <div class="view-more">
+          <a href="books.html?section=new">Xem thêm sách mới</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Thư Viện</p>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+    <script>
+      // Gọi hàm để hiển thị sách nổi bật và sách mới
+      displayFeaturedBooks();
+      displayNewArrivals();
+    </script>
+  </body>
+</html>

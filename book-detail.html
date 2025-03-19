@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chi tiết sách</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Thư Viện</h1>
+      <nav>
+        <ul>
+          <li><a href="home.html">Trang chủ</a></li>
+          <li><a href="books.html">Sách</a></li>
+          <li><a href="profile.html">Hồ sơ</a></li>
+          <li><a href="#" onclick="logout()">Đăng xuất</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="book-detail-section">
+        <h2>Chi Tiết Sách</h2>
+        <div id="bookDetails"></div>
+        <button>Mượn sách</button>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Thư Viện</p>
+    </footer>
+    <script>
+      // Kiểm tra xem người dùng đã đăng nhập chưa
+      if (localStorage.getItem("isLoggedIn") !== "true") {
+        // Nếu chưa đăng nhập, chuyển hướng đến trang đăng nhập
+        window.location.href = "index.html";
+      }
+    </script>
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
